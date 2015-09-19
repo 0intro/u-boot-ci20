@@ -9,6 +9,10 @@ obj-y	+= cache.o
 obj-y	+= cache_init.o
 obj-y	+= io.o
 
+ifndef CONFIG_SPL_BUILD
 obj-$(CONFIG_CMD_BOOTM) += bootm.o
+else
+obj-$(CONFIG_SPL_FRAMEWORK) += spl.o
+endif
 
 lib-$(CONFIG_USE_PRIVATE_LIBGCC) += ashldi3.o ashrdi3.o lshrdi3.o

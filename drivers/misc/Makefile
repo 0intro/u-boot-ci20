@@ -16,6 +16,7 @@ obj-$(CONFIG_CROS_EC_SPI) += cros_ec_spi.o
 obj-$(CONFIG_FSL_DEBUG_SERVER) += fsl_debug_server.o
 obj-$(CONFIG_FSL_IIM) += fsl_iim.o
 obj-$(CONFIG_GPIO_LED) += gpio_led.o
+obj-$(CONFIG_JZ4780_EFUSE) += jz4780_efuse.o
 obj-$(CONFIG_I2C_EEPROM) += i2c_eeprom.o
 obj-$(CONFIG_FSL_MC9SDZ60) += mc9sdz60.o
 obj-$(CONFIG_MXC_OCOTP) += mxc_ocotp.o

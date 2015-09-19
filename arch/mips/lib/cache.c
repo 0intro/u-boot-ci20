@@ -45,6 +45,8 @@ static inline unsigned long dcache_line_size(void)
 
 #endif /* !CONFIG_SYS_CACHELINE_SIZE */
 
+#ifndef CONFIG_TARGET_CI20
+
 void flush_cache(ulong start_addr, ulong size)
 {
 	unsigned long ilsize = icache_line_size();
@@ -116,3 +118,5 @@ void invalidate_dcache_range(ulong start_addr, ulong stop)
 		addr += lsize;
 	}
 }
+
+#endif /* !CONFIG_TARGET_CI20 */

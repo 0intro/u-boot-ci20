@@ -29,6 +29,13 @@ config TARGET_MALTA
 	select SUPPORTS_CPU_MIPS32_R2
 	select SWAP_IO_SPACE
 
+config TARGET_CI20
+	bool "Support ci20"
+	select SUPPORTS_LITTLE_ENDIAN
+	select SUPPORTS_CPU_MIPS32_R1
+	select SUPPORTS_CPU_MIPS32_R2
+	select SUPPORT_SPL
+
 config TARGET_VCT
 	bool "Support vct"
 	select SUPPORTS_BIG_ENDIAN
@@ -56,6 +63,7 @@ endchoice
 
 source "board/dbau1x00/Kconfig"
 source "board/imgtec/malta/Kconfig"
+source "board/imgtec/ci20/Kconfig"
 source "board/micronas/vct/Kconfig"
 source "board/pb1x00/Kconfig"
 source "board/qemu-mips/Kconfig"
